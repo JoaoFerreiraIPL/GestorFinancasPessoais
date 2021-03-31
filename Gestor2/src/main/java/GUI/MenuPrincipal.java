@@ -26,30 +26,38 @@ public class MenuPrincipal extends JFrame {
     private JPanel ConfiguracoesPanel;
     private JPanel CategoriasPanel;
     private JPanel ContasPanel;
+    private JScrollBar scrollBar1;
+    private JList list1;
+    private JFormattedTextField formattedTextField1;
+    private JFormattedTextField formattedTextField2;
 
     public MenuPrincipal() {
         super("Gestor");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setContentPane(JpanelPrincipal);
         pack();
-        vistaGeralButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                CardPanel.removeAll();
-                CardPanel.add(VistaGeralPanel);
-                CardPanel.repaint();
-                CardPanel.revalidate();
-            }
-        });
-        adicionarReceitaButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                CardPanel.removeAll();
-                CardPanel.add(AdicionarReceitaPanel);
-                CardPanel.repaint();
-                CardPanel.revalidate();
-            }
-        });
+
+        categoriasButton.setVisible(false);
+        contasBancariasButton.setVisible(false);
+
+
+
+
+        vistaGeralButton.addActionListener(this::btnVistaGeralActionPerformed);
+        consultasButton.addActionListener(this::btnConsulta);
+    }
+
+    private void btnConsulta(ActionEvent actionEvent) {
+        
+
+
+    }
+
+    private void btnVistaGeralActionPerformed(ActionEvent actionEvent) {
+        CardPanel.removeAll();
+        CardPanel.add(VistaGeralPanel);
+        CardPanel.repaint();
+        CardPanel.revalidate();
     }
 
     public static void main(String[] args) {
