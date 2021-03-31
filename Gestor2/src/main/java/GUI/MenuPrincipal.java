@@ -26,10 +26,11 @@ public class MenuPrincipal extends JFrame {
     private JPanel ConfiguracoesPanel;
     private JPanel CategoriasPanel;
     private JPanel ContasPanel;
-    private JScrollBar scrollBar1;
-    private JList list1;
-    private JFormattedTextField formattedTextField1;
-    private JFormattedTextField formattedTextField2;
+    private JScrollBar scrollBarCat;
+    private JList listCat;
+    private JTextField textFieldNomeCat;
+    private JTextField textFieldDescCat;
+    private JButton buttonInsertCat;
 
     public MenuPrincipal() {
         super("Gestor");
@@ -44,11 +45,12 @@ public class MenuPrincipal extends JFrame {
 
 
         vistaGeralButton.addActionListener(this::btnVistaGeralActionPerformed);
-        consultasButton.addActionListener(this::btnConsulta);
+        categoriasButton.addActionListener(this::btnCategoriasActionPerformed);
     }
 
-    private void btnConsulta(ActionEvent actionEvent) {
-        
+    private void btnCategoriasActionPerformed(ActionEvent actionEvent) {
+        categoriasButton.setVisible(!categoriasButton.isVisible());
+        contasBancariasButton.setVisible(!contasBancariasButton.isVisible());
 
 
     }
