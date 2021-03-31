@@ -32,10 +32,15 @@ public class MenuPrincipal extends JFrame {
     private JTextField textFieldNomeCat;
     private JTextField textFieldDescCat;
     private JButton buttonInsertCat;
-
-
-
-
+    private JScrollBar scrollBar1;
+    private JList list1;
+    private JScrollBar scrollContas;
+    private JList listContas;
+    private JTextField scrollBanco;
+    private JComboBox comboBoxTipoConta;
+    private JFormattedTextField formattedTextSaldoInicial;
+    private JButton buttonInserirConta;
+    private JTextField scrollNome;
 
 
     public MenuPrincipal() {
@@ -52,6 +57,12 @@ public class MenuPrincipal extends JFrame {
 
         vistaGeralButton.addActionListener(this::btnVistaGeralActionPerformed);
         categoriasButton.addActionListener(this::btnCategoriasActionPerformed);
+        configuraçõesButton.addActionListener(this::btnConfiguracoesActionPerformed);
+    }
+
+    private void btnConfiguracoesActionPerformed(ActionEvent actionEvent) {
+        categoriasButton.setVisible(!categoriasButton.isVisible());
+        contasBancariasButton.setVisible(!contasBancariasButton.isVisible());
     }
 
     private void btnCategoriasActionPerformed(ActionEvent actionEvent) {
