@@ -60,7 +60,7 @@ public class MenuPrincipal extends JFrame {
         CardPanel.revalidate();
     }
 
-    
+
     private void testarGIt(){
         return;
     }
