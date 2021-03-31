@@ -60,6 +60,11 @@ public class MenuPrincipal extends JFrame {
         CardPanel.revalidate();
     }
 
+    
+    private void testarGIt(){
+        return;
+    }
+
     public static void main(String[] args) {
         new MenuPrincipal().setVisible(true);
     }
