@@ -26,6 +26,7 @@ public class MenuPrincipal extends JFrame {
     private JPanel ConfiguracoesPanel;
     private JPanel CategoriasPanel;
     private JPanel ContasPanel;
+
     private JComboBox comboBoxTipoConta;
     private JButton buttonInserirConta;
     private JList listContas;
@@ -34,29 +35,36 @@ public class MenuPrincipal extends JFrame {
     private JTextField scrollNome;
     private JScrollBar scrollContas;
 
+
+ 
+
     public MenuPrincipal() {
         super("Gestor");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setContentPane(JpanelPrincipal);
         pack();
-        vistaGeralButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                CardPanel.removeAll();
-                CardPanel.add(VistaGeralPanel);
-                CardPanel.repaint();
-                CardPanel.revalidate();
-            }
-        });
-        adicionarReceitaButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                CardPanel.removeAll();
-                CardPanel.add(AdicionarReceitaPanel);
-                CardPanel.repaint();
-                CardPanel.revalidate();
-            }
-        });
+
+        categoriasButton.setVisible(false);
+        contasBancariasButton.setVisible(false);
+
+
+
+
+        vistaGeralButton.addActionListener(this::btnVistaGeralActionPerformed);
+        consultasButton.addActionListener(this::btnConsulta);
+    }
+
+    private void btnConsulta(ActionEvent actionEvent) {
+        
+
+
+    }
+
+    private void btnVistaGeralActionPerformed(ActionEvent actionEvent) {
+        CardPanel.removeAll();
+        CardPanel.add(VistaGeralPanel);
+        CardPanel.repaint();
+        CardPanel.revalidate();
     }
 
 
