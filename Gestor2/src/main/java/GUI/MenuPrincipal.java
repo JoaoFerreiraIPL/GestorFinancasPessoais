@@ -26,11 +26,17 @@ public class MenuPrincipal extends JFrame {
     private JPanel ConfiguracoesPanel;
     private JPanel CategoriasPanel;
     private JPanel ContasPanel;
+
     private JScrollBar scrollBarCat;
     private JList listCat;
     private JTextField textFieldNomeCat;
     private JTextField textFieldDescCat;
     private JButton buttonInsertCat;
+
+
+
+
+
 
     public MenuPrincipal() {
         super("Gestor");
